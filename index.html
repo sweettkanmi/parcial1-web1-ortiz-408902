@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parcial1 - Perfil (SPA)</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img alt="logo" src="assets\logo.png" aria-hidden="true" class="logo-placeholder" />
+      <h1 class="sr-only">Parcial</h1>
+      <div class="logo-text">feisbuk</div>
+    </div>
+
+    <div class="search-wrap">
+      <label for="search" class="sr-only">busca bro</label>
+      <input id="search" type="search" placeholder="Buscar" />
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="profile-aside" role="complementary" aria-label="Perfil">
+      <div class="avatar"></div>
+      <h2 class="profile-name">Nombre</h2>
+
+      <nav class="side-nav" aria-label="Navegación lateral">
+        <ul>
+          <li>Información</li>
+          <li>Email</li>
+          <li>Teléfono</li>
+          <li>Intereses</li>
+          <li>Situación sentimental</li>
+        </ul>
+      </nav>
+
+      <div class="friends">
+        <h3>X Amigos</h3>
+        <div class="friends-grid" aria-hidden="true">
+          <div class="friend"></div>
+          <div class="friend"></div>
+          <div class="friend"></div>
+        </div>
+        <a href="#" class="see-all">Ver todos</a>
+      </div>
+    </aside>
+
+    <section class="content" role="main">
+      <nav class="top-tabs" aria-label="Secciones">
+        <button data-route="muro" class="tab active">Muro</button>
+        <button data-route="info" class="tab">Info</button>
+        <button data-route="photos" class="tab">Photos</button>
+        <button data-route="boxes" class="tab">Boxes</button>
+      </nav>
+
+      <article id="muro" class="view">
+        <form id="postForm" class="post-form" aria-label="Crear publicación">
+          <textarea id="postText" placeholder="Escribe algo..." rows="3"></textarea>
+          <div class="post-actions">
+            <label class="attach">
+              Attach:
+              <input id="attach" type="file" accept="image/*" />
+            </label>
+            <button type="submit" class="btn primary">Compartir</button>
+          </div>
+        </form>
+
+        <div id="posts" class="posts-list">
+        </div>
+      </article>
+
+      <article id="info" class="view hidden">
+        <h2>Info</h2>
+        <hr />
+        <ul class="info-list">
+          <li><strong>Email</strong><br />email@ejemplo.com</li>
+          <li><strong>Teléfono</strong><br />+57 300 0000000</li>
+          <li><strong>Intereses</strong><br />Design, Games, Tech</li>
+          <li><strong>Situación sentimental</strong><br />Soltero</li>
+        </ul>
+
+        <div class="recent-activity">
+          <div class="small-avatar"></div>
+          <div>
+            <strong>Emal</strong><br />
+            <small>70 abr</small>
+          </div>
+          <div class="like-share">
+            <button class="btn">Me gusta</button>
+            <button class="btn">Compartir</button>
+          </div>
+        </div>
+      </article>
+
+      <article id="photos" class="view hidden">
+        <h2>Photos</h2>
+        <div class="photos-grid">
+          <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+          <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+          <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+        </div>
+      </article>
+
+      <article id="boxes" class="view hidden">
+        <h2>Boxes</h2>
+        <p>Contenido de Boxes — aquí puedes simular módulos adicionales.</p>
+        <div class="boxes-grid">
+          <div class="box">Box 1</div>
+          <div class="box">Box 2</div>
+          <div class="box">Box 3</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Parcial1 - SPA demo · Hecho con Vanilla JS</small>
+  </footer>
+
+  <script src="css\js\app.js" defer></script>
+</body>
+</html>
